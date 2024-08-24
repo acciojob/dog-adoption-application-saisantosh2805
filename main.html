@@ -1,107 +1,42 @@
+html - 
+ 
+ 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Dog Adoption Application</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        input[type="text"],
-        input[type="tel"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #218838;
-        }
-    </style>
-</head>
-<body>
-
-    <form id="dogAdoptionForm">
-        <h2>Dog Adoption Application</h2>
-
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Name" required>
-
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" required>
-
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="Address" required>
-
-        <label>
-            <input type="checkbox" id="checkbox" name="livedWithDog" value="Have you ever lived with a Dog before?">
-            Have you ever lived with a Dog before?
-        </label>
-
-        <label for="breeds">Please select your preferred breeds <small>(Hold down Ctrl or Command to select multiple options)</small></label>
-        <select id="multiSelect" name="breeds[]" multiple required>
-            <option value="Labrador Retriever">Labrador Retriever</option>
-            <option value="German Shepherd">German Shepherd</option>
-            <option value="Golden Retriever">Golden Retriever</option>
-        </select>
-
-        <input type="submit" value="Submit">
+  </head>
+  <body>
+    <!-- the entire body must be written by student -->
+    <form action="#">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Name" />
+      <label for="phone">Phone numer</label>
+      <input type="text" id="phone" placeholder="Phone Number" />
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Address" />
+      <label for="checkbox"> checkbox</label>
+      <input
+        type="checkbox"
+        id="checkbox"
+        value="Have you ever lived with a Dog before?"
+      />
+      <label for="multiSelect">Please select your preferred breeds </label>
+      <select id="multiSelect">
+        <option>pug</option>
+        <option>xyz</option>
+        <option>abc</option>
+      </select>
+      <label for="submit">submit</label>
+      <input type="submit" id="submit" value="Submit" />
     </form>
-
-</body>
-	<script>
-    document.querySelector('#dogAdoptionForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // This will prevent the default form submission
-
-        // You can now process the form data
-        var name = document.querySelector('#name').value;
-        var phone = document.querySelector('#phone').value;
-        var address = document.querySelector('#address').value;
-        var livedWithDog = document.querySelector('#checkbox').checked;
-        var breeds = Array.from(document.querySelector('#multiSelect').selectedOptions).map(option => option.value);
-
-        console.log({name, phone, address, livedWithDog, breeds});
-    });
-</script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>
+ 
+ 
+ 
+ 
