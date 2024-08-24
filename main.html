@@ -90,4 +90,18 @@
     </form>
 
 </body>
+	<script>
+    document.querySelector('#dogAdoptionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // This will prevent the default form submission
+
+        // You can now process the form data
+        var name = document.querySelector('#name').value;
+        var phone = document.querySelector('#phone').value;
+        var address = document.querySelector('#address').value;
+        var livedWithDog = document.querySelector('#checkbox').checked;
+        var breeds = Array.from(document.querySelector('#multiSelect').selectedOptions).map(option => option.value);
+
+        console.log({name, phone, address, livedWithDog, breeds});
+    });
+</script>
 </html>
