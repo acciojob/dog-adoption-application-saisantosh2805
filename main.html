@@ -69,17 +69,17 @@
         <input type="text" id="name" name="name" placeholder="Name" required>
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" required>
 
         <label for="address">Address</label>
         <input type="text" id="address" name="address" placeholder="Address" required>
 
         <label>
-            <input type="checkbox" id="livedWithDog" name="livedWithDog" value="Have you ever lived with a Dog before?">
+            <input type="checkbox" id="livedWithDog" name="livedWithDog" value="yes">
             Have you ever lived with a Dog before?
         </label>
 
-        <label for="breeds">Please select your preferred breeds</label>
+        <label for="breeds">Please select your preferred breeds <small>(Hold down Ctrl or Command to select multiple options)</small></label>
         <select id="breeds" name="breeds[]" multiple required>
             <option value="Labrador Retriever">Labrador Retriever</option>
             <option value="German Shepherd">German Shepherd</option>
